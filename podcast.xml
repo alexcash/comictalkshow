@@ -10,7 +10,7 @@ layout: nil
 
 <title>Comic Talk</title>
 
-<link>http://www.comictalkshow.com/</link>
+<link>http://comictalkshow.com/</link>
 
 <language>en</language>
 
@@ -46,7 +46,7 @@ layout: nil
 
 <itunes:category text="Society &amp; Culture" />
 
-<itunes:new-feed-url>http://www.comictalkshow.com/podcast.xml</itunes:new-feed-url>
+<itunes:new-feed-url>http://comictalkshow.com/podcast.xml</itunes:new-feed-url>
 
  {% for post in site.posts limit:10 %}
  
@@ -60,7 +60,7 @@ layout: nil
  
  <itunes:summary>{{ post.content | xml_escape }}</itunes:summary>
  
-<itunes:image href="http://www.comictalkshow.com/assets/itunes.jpg" />
+<itunes:image href="http://comictalkshow.com/img/itunes.jpg" />
  
  <enclosure url="{{ post.link }}" length="{{ post.length }}" type="audio/mpeg" />
  
