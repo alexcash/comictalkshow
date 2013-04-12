@@ -1,0 +1,81 @@
+---
+layout: nil
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+
+<channel>
+
+<title>Comic Talk</title>
+
+<link>http://www.comictalkshow.com/</link>
+
+<language>en</language>
+
+<copyright>&#xA9; 2013 Alex Cash &amp; Jared Cash</copyright>
+
+<itunes:subtitle>Exploring the rich history of comics.</itunes:subtitle>
+
+<itunes:author>Jared Cash &amp; Alex Cash</itunes:author>
+
+<itunes:keywords>comic,comics,book,marvel,dc,image,archie,valiant,image,read,club,talk,show,discuss</itunes:keywords>
+
+<itunes:summary>Jared - a recovering comic book reader, and Alex - a nerd new to comic books read and discuss a different story arc every week. The hosts are a decade apart and have wildly different previous exposure to comics which leads to interesting discussions about characters, plot, culture, writing and art. The show covers comics from accross the spectrum. Expect titles from publishers such as Marvel, DC, Dark Horse, Image, Archie, Valiant, and more.</itunes:summary>
+
+<description>Jared - a recovering comic book reader, and Alex - a nerd new to comic books read and discuss a different story arc every week. The hosts are a decade apart and have wildly different previous exposure to comics which leads to interesting discussions about characters, plot, culture, writing and art. The show covers comics from accross the spectrum. Expect titles from publishers such as Marvel, DC, Dark Horse, Image, Archie, Valiant, and more.</description>
+
+<itunes:owner>
+
+<itunes:name>Alex Cash</itunes:name>
+
+<itunes:email>show@comictalkshow.com</itunes:email>
+
+</itunes:owner>
+
+<itunes:image href="http://www.comictalkshow.com/assets/itunes.jpg" />
+
+<itunes:category text="Games &amp; Hobbies" >
+
+<itunes:category text="Hobbies" />
+
+</itunes:category>
+
+<itunes:category text="Literature" />
+
+<itunes:category text="Society &amp; Culture" />
+
+<itunes:new-feed-url>http://www.comictalkshow.com/podcast.xml</itunes:new-feed-url>
+
+ {% for post in site.posts limit:10 %}
+ 
+ <item>
+ 
+ <title>{{ post.title }}</title>
+ 
+ <itunes:author>Jared Cash &amp; Alex Cash</itunes:author>
+ 
+ <itunes:subtitle>Comic Talk: {{ post.title }}</itunes:subtitle>
+ 
+ <itunes:summary>{{ post.content | xml_escape }}</itunes:summary>
+ 
+<itunes:image href="http://www.comictalkshow.com/assets/itunes.jpg" />
+ 
+ <enclosure url="{{ post.link }}" length="{{ post.length }}" type="audio/mpeg" />
+ 
+ <guid>{{ post.link }}</guid>
+ 
+ <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S" }} GMT</pubDate>
+ 
+ <itunes:duration>{{ post.duration }}</itunes:duration>
+ 
+ <itunes:keywords>comic,comics,book,marvel,dc,image,archie,valiant,image,read,club,talk,show,discuss</itunes:keywords>
+ 
+ </item>
+
+ {% endfor %}
+
+</channel>
+
+</rss>
