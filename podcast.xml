@@ -16,7 +16,7 @@ layout: nil
 
 <copyright>&#xA9; 2013 Alex Cash &amp; Jared Cash</copyright>
 
-<itunes:subtitle>Exploring the rich history of comics.</itunes:subtitle>
+<itunes:subtitle>Two guys read some comics.</itunes:subtitle>
 
 <itunes:author>Jared Cash &amp; Alex Cash</itunes:author>
 
@@ -46,7 +46,7 @@ layout: nil
 
 <itunes:category text="Society &amp; Culture" />
 
-<itunes:new-feed-url>http://comictalkshow.com/podcast.xml</itunes:new-feed-url>
+<itunes:new-feed-url>http://www.comictalkshow.com/podcast.xml</itunes:new-feed-url>
 
  {% for post in site.posts limit:10 %}
  
@@ -60,7 +60,7 @@ layout: nil
  
  <itunes:summary>{{ post.description | xml_escape }}</itunes:summary>
  
- <itunes:image href="http://comictalkshow.com/img/itunes.jpg" />
+ <itunes:image href="http://www.comictalkshow.com/img/itunes.jpg" />
  
  <enclosure url="{{ post.link }}" length="{{ post.length }}" type="audio/mpeg" />
  
