@@ -26,7 +26,7 @@ title: Home
 			<audio src="{{ post.link }}" preload="none" controls>
 			</audio>
 			<p class="meta">
-				<time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time> • <a href="{{ post.url }}">Permalink</a> • <a href="{{ post.link }}" rel="bookmark" title="Download {{ post.title }}">Download <i class="icon-download"></i></a>
+				<time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time> • <a href="{{ post.url }}">Permalink</a> • <a href="{{ post.link }}" rel="bookmark" title="Download {{ post.title }}">Download <i class="icon-download"></i></a>
 			</p>
 		</article>
 	{% endfor %}
