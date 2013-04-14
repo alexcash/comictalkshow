@@ -1,19 +1,15 @@
 {% include header.html %}
 
-<div class="page">
-<div class="col-7-12">
-       <article>
-       <h1>{{ page.title }}</h1>
-       {{ content }}
-       </article>
-    </div>
-    
-    <div class="col-5-12">
-       <h2>Download Episode</h2>
-       <p><a href="{{ page.link }}" rel="bookmark" title="Download {{ page.title }}">Download</a></p>
-       <p><a href="https://itunes.apple.com/gb/podcast/from-the-pub-podcast/id336250525?mt=2">Subscribe in iTunes</a></p>
-    </div>
-    
+<div class="span6">
+  <article class="episode">
+    <h2>{{page.title}}</h2>
+    <p>{{page.content}}</p>
+    <audio src="{{ post.link }}" preload="none" controls>
+    </audio>
+    <p class="meta"><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_string }}</time> • <a href="{{ page.link }}" rel="bookmark" title="Download {{ post.title }}">Download <i class="icon-download"></i></a></p>
+  </article>
 </div>
+
+{% include about.html %}
 
 {% include footer.html %}

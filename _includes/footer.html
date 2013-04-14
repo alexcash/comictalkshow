@@ -1,17 +1,34 @@
-<footer><p>Copyright &copy; 2013 <a href="http://www.alexcash.com/" title="Alex Cash">Alex Cash</a> &amp; <a href="http://zepfhyr.com/blog/" title="Jared Cash">Jared Cash</a></p></footer>
-	
-</div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="js/all.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		</div><!-- row-fluid -->
 
-  ga('create', 'UA-40108557-1', 'comictalkshow.com');
-  ga('send', 'pageview');
+		<footer>
+			<p>Copyright &copy; 2013 <a href="http://www.alexcash.com/" title="Alex Cash">Alex Cash</a> &amp; <a href="http://zepfhyr.com/blog/" title="Jared Cash">Jared Cash</a></p>
+		</footer>
+			
+		</div><!-- conitain -->
 
-</script>
-</body>
+		<!-- scripts -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>
+		  
+			//load GA
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  //start GA
+		  ga('create', 'UA-40108557-1', 'comictalkshow.com');
+		  //log page view
+		  ga('send', 'pageview');
+
+		  // smooth scroll link clicks
+		  $('a').click(function(){
+		    $('html, body').animate({
+		        scrollTop: $( $.attr(this, 'href') ).offset().top
+		    }, 500);
+		    return false;
+			});
+
+		</script>
+	</body>
 </html>

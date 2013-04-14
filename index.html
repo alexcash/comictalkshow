@@ -3,48 +3,33 @@ layout: default
 title: Home
 ---
 
-<div class="row-fluid">
-
 <div class="span6">
 	<article class="episode">
-	<h2>Up Next</h2>
-	<p>
-	The <a href="http://dc.wikia.com/wiki/Death_of_Superman">Death of Superman</a>. We'll be following the same issues as the trade paperback, listed below. All of the issues are available digitally from <a href="http://www.readdcentertainment.com/Superman-Death-of-Superman/comics-story-arc/250">DC</a> and <a href="http://www.comixology.com/Superman-Death-of-Superman/comics-story-arc/250">Comixology</a>.</p>
-	<ul>
-		<li>Superman: Man of Steel #18</li>
-		<li>Justice League America #69</li>
-		<li>Superman (Volume Two) #74</li>
-		<li>Adventures of Superman #497</li>
-		<li>Action Comics #684</li>
-		<li>Superman: Man of Steel #19</li>
-		<li>Superman (Volume Two) #75</li>
-	</ul>
-</article>
+		<h2>Up Next</h2>
+		<p>
+		The <a href="http://dc.wikia.com/wiki/Death_of_Superman">Death of Superman</a>. We'll be following the same issues as the trade paperback, listed below. All of the issues are available digitally from <a href="http://www.readdcentertainment.com/Superman-Death-of-Superman/comics-story-arc/250">DC</a> and <a href="http://www.comixology.com/Superman-Death-of-Superman/comics-story-arc/250">Comixology</a>.</p>
+		<ul>
+			<li>Superman: Man of Steel #18</li>
+			<li>Justice League America #69</li>
+			<li>Superman (Volume Two) #74</li>
+			<li>Adventures of Superman #497</li>
+			<li>Action Comics #684</li>
+			<li>Superman: Man of Steel #19</li>
+			<li>Superman (Volume Two) #75</li>
+		</ul>
+	</article>
 
-{% for post in site.posts %}
-<article class="episode">
-<h2>{{post.title}}</h2>
-{{post.content}}
-<div id="pre-audio" data-src="{{ post.link }}" preload="none" controls>
-</div>
-<p class="meta"><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time> • <a href="{{ post.link }}" rel="bookmark" title="Download {{ post.title }}">Download <i class="icon-download"></i></a></p>
-</article>
-{% endfor %}
+	{% for post in site.posts %}
+		<article class="episode">
+			<h2>{{post.title}}</h2>
+			{{post.content}}
+			<audio src="{{ post.link }}" preload="none" controls>
+			</audio>
+			<p class="meta">
+				<time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time> • <a href="{{ post.url }}">Permalink</a> • <a href="{{ post.link }}" rel="bookmark" title="Download {{ post.title }}">Download <i class="icon-download"></i></a>
+			</p>
+		</article>
+	{% endfor %}
 </div>
 
-<div class="span6 upnext">
-</div>
-
-<div id="about" class="span6 about">
-<div class="bio">
-	<img src="img/jared.png"><div class="text">Jared - a recovering comic book reader<div class="links"><a href="http://twitter.com/zepfhyr"><i class="icon-twitter"></i></a><a href="http://zepfhyr.com/"><i class="icon-pencil"></i></a></div>
-</div>
-</div>	
-<div class="bio">
-	<img src="img/alex.png"><div class="text">Alex - a nerd new to comic books<div class="links"><a href="http://twitter.com/alexcash"><i class="icon-twitter"></i></a><a href="http://www.alexcash.com/"><i class="icon-pencil"></i></a></div>
-</div>
-</div>	
-<div class="description">Jared and Alex read and discuss a different story arc every week. The hosts are a decade apart and have wildly different previous exposure to comics which leads to interesting discussions about characters, plot, culture, writing and art. The show covers comics from accross the spectrum. Expect titles from publishers such as Marvel, DC, Dark Horse, Image, Archie, Valiant, and more.</div>
-</div>
-    
-</div>
+{% include about.html %}
