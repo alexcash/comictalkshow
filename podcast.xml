@@ -54,7 +54,7 @@ layout: nil
  
  <title>{{ post.title }}</title>
  
- <itunes:author>Jared Cash &amp; Alex Cash</itunes:author>
+ <itunes:author>Jared &amp; Alex</itunes:author>
  
  <itunes:subtitle>Comic Talk Episode {{ post.title }}</itunes:subtitle>
  
